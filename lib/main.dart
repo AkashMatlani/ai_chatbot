@@ -1,3 +1,4 @@
+import 'package:ai_chatbot/app/ui/pages/chat_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -8,12 +9,14 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'AI Chatbot',
-          theme: ThemeData.dark(),
-        );
+      debugShowCheckedModeBanner: false,
+      title: 'AI Chatbot',
+      theme: ThemeData.dark(),
+      home: ChatPage(),
+    );
   }
 }
