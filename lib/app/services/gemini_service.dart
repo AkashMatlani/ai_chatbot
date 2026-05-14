@@ -26,18 +26,12 @@ class GeminiService {
           ]
         }),
       );
-
-      print("STATUS CODE: ${response.statusCode}");
-      print("BODY: ${response.body}");
-
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-
         if (data['candidates'] != null &&
             data['candidates'].isNotEmpty) {
           return data['candidates'][0]['content']['parts'][0]['text'];
         }
-
         return 'No response from AI';
       }
 
