@@ -33,15 +33,6 @@ Modern AI chatbot built with **Flutter + GetX + Gemini API**, featuring a clean 
 <p align="center">
   <img src="assets/screenshots/chat.jpeg" width="300"/>
 </p>
-
-<p align="center">
-  <img src="assets/screenshots/typing.jpeg" width="300"/>
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/response.jpeg" width="300"/>
-</p>
-
 ---
 
 ## 📁 Project Structure
@@ -63,31 +54,26 @@ lib/
 │ ├── chat_bubble.dart
 │ └── message_input.dart
 
-
-
-
-## ⚙️ Getting Started
-
-### 1. Clone the repository
-
+⚙️ Getting Started
+1. Clone repo
 
 git clone https://github.com/AkashMatlani/ai_chatbot.git
 cd flutter-gemini-chatbot
 
-### 2. Install dependencies
+2. Install dependencies
 flutter pub get
 
-### 3. Add API Key
+3. Add API Key
 
 Create a .env file in the root directory:
 
 GEMINI_API_KEY=YOUR_API_KEY
 
-### 4. Add .env to Git Ignore
+4. Add .env to Git Ignore
 
 Make sure .env is NOT pushed to GitHub:
 
 .env
 
-### 5. Run the app
+5. Run the app
 flutter run
