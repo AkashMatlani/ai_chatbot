@@ -20,7 +20,9 @@ class MessageInput extends StatelessWidget {
               controller: controller.textController,
               style: const TextStyle(color: Colors.white),
               onSubmitted: (_) {
-                controller.sendMessage();
+                if (!controller.isLoading.value) {
+                  controller.sendMessage();
+                }
               },
               decoration: InputDecoration(
                 hintText: 'Ask anything...',

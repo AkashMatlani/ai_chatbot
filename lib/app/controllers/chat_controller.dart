@@ -10,6 +10,7 @@ class ChatController extends GetxController {
   final RxBool isLoading = false.obs;
 
   Future<void> sendMessage() async {
+    FocusManager.instance.primaryFocus?.unfocus();
     final text = textController.text.trim();
     if (text.isEmpty) return;
     messages.add(MessageModel(text: text, isUser: true));
