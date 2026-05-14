@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../constants/app_colors.dart';
 import '../widgets/chat_bubble.dart';
+import '../widgets/message_input.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({super.key});
@@ -35,6 +36,16 @@ class ChatPage extends StatelessWidget {
               ),
             ),
           ),
+          Obx(
+            () => controller.isLoading.value
+                ? const Padding(
+                    padding: EdgeInsets.all(12),
+                    child: CircularProgressIndicator(),
+                  )
+                : const SizedBox.shrink(),
+          ),
+
+          MessageInput(controller: controller),
         ],
       ),
     );
